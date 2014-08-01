@@ -1,0 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
+
+body, html {
+	height: 100%;
+}
+#conversation {
+	font-size: 7em;
+	font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+	padding: 40px;
+	position: relative;
+}
+#conversation ul {
+	list-style: none;
+}
+#conversation li {
+	position: relative;
+}
