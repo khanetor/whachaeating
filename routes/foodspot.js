@@ -1,21 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
-var request = require('request');
-var cheerio = require('cheerio');
+var foodspot_factory = require('../FoodSpottingApi/foodspot_factory');
 
-router.get('/', function(req, res) {
-  var url = 'http://www.foodspotting.com/find/best/banh-canh/in/Ho-Chi-Minh-City-H%E1%BB%93-Ch%C3%AD-Minh-Vietnam';
-
-	request(url, function(err, response, html) {
-		if (!err) {
-			var $ = cheerio.load(html);
-
-			res.json($('body').html());
-		}
+router.get('/:food', function(req, res) {
+	foodspot_factory.search(req.params.food, function(foodspotJSON) {
+		foodspotJSON.forEach(function(item, index) {
+			console.log(item);
+		});
+		res.json(foodspotJSON);
 	});
-
-  
 });
 
 module.exports = router;
