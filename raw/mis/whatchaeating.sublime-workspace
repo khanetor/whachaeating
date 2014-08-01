@@ -1,0 +1,1070 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"res",
+				"res"
+			],
+			[
+				"instruc",
+				"instructor_ids"
+			],
+			[
+				"instr",
+				"instructor_ids"
+			],
+			[
+				"pro",
+				"processed"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"generate",
+				"generateHash"
+			],
+			[
+				"c",
+				"common"
+			],
+			[
+				"section",
+				"sectionId"
+			],
+			[
+				"assi",
+				"assignments"
+			],
+			[
+				"assignmen",
+				"assignments"
+			],
+			[
+				"error",
+				"error_message"
+			],
+			[
+				"find",
+				"findOne"
+			],
+			[
+				"sugges",
+				"suggestedSlug"
+			],
+			[
+				"cou",
+				"courseSchema"
+			],
+			[
+				"slug",
+				"slugUnique"
+			],
+			[
+				"sugge",
+				"suggestedSlug"
+			],
+			[
+				"courseS",
+				"courseSlug"
+			],
+			[
+				"mon",
+				"mongo_url"
+			],
+			[
+				"com",
+				"common"
+			],
+			[
+				"ques",
+				"question"
+			],
+			[
+				"quest",
+				"question_id"
+			],
+			[
+				"assign",
+				"assignment"
+			],
+			[
+				"assignm",
+				"assignment"
+			],
+			[
+				"is",
+				"is_user_instructor"
+			],
+			[
+				"ali",
+				"align_height"
+			],
+			[
+				"ob_e",
+				"ob_end_flush"
+			],
+			[
+				"question_row",
+				"question_row_control"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"soc",
+				"socket"
+			],
+			[
+				"room",
+				"roomTeachers"
+			],
+			[
+				"inde",
+				"indexOf"
+			],
+			[
+				"regist",
+				"registerTeacher"
+			],
+			[
+				"an",
+				"anAnswer"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"app",
+				"append"
+			],
+			[
+				"create",
+				"createElement"
+			],
+			[
+				"margi",
+				"margin-right"
+			],
+			[
+				"flash",
+				"flashCmdPrefix"
+			],
+			[
+				"hand",
+				"handshakeData"
+			],
+			[
+				"flas",
+				"flashCmdPrefix"
+			],
+			[
+				"scro",
+				"scrollHeight"
+			],
+			[
+				"chat",
+				"chat-logger"
+			],
+			[
+				"sub",
+				"subscribe"
+			],
+			[
+				"get",
+				"getRoomClients"
+			],
+			[
+				"send",
+				"sendBack"
+			],
+			[
+				"disco",
+				"disconnect"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"co",
+				"connected"
+			],
+			[
+				"connec",
+				"connected"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"blo",
+				"inline-block"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"err",
+				"errMsg"
+			],
+			[
+				"er",
+				"errMsg"
+			],
+			[
+				"bo",
+				"body"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"paddi",
+				"padding"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"li",
+				"list-style-type"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"front",
+				"front-item-desc"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"borde",
+				"border-left"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"backgrou",
+				"background"
+			],
+			[
+				"lis",
+				"list-style-type"
+			],
+			[
+				"gen",
+				"genderRich"
+			],
+			[
+				"target",
+				"targetRichId"
+			],
+			[
+				"outl",
+				"outline-width"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"lastNam",
+				"lastname-rich"
+			],
+			[
+				"info-box-",
+				"info-box-small"
+			],
+			[
+				"info",
+				"info-box-small"
+			],
+			[
+				"text",
+				"textfield"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"new",
+				"newPostId"
+			],
+			[
+				"listy",
+				"list-style-type"
+			],
+			[
+				"paddin",
+				"padding-right"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"backg",
+				"background"
+			],
+			[
+				"gett",
+				"gettype"
+			],
+			[
+				"doSe",
+				"doSelect"
+			],
+			[
+				"border-ra",
+				"border-radius"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"mari",
+				"margin-bottom"
+			],
+			[
+				"dl_",
+				"dl_sv_study"
+			],
+			[
+				"Main",
+				"main-nav"
+			],
+			[
+				"ran",
+				"random"
+			],
+			[
+				"prep",
+				"prepareOn"
+			],
+			[
+				"hol",
+				"holderId"
+			],
+			[
+				"mouse",
+				"mouseout"
+			],
+			[
+				"off",
+				"offsetY"
+			],
+			[
+				"expand",
+				"expandHei"
+			],
+			[
+				"exp",
+				"expholdr"
+			],
+			[
+				"form",
+				"form_valid"
+			],
+			[
+				"is_nu",
+				"is_numeric"
+			],
+			[
+				"email",
+				"email_regex"
+			],
+			[
+				"preg_",
+				"preg_match"
+			],
+			[
+				"backgr",
+				"background"
+			],
+			[
+				"backgroun",
+				"background-color"
+			],
+			[
+				"view",
+				"viewportHei"
+			],
+			[
+				"top",
+				"topOffset"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"re",
+				"regex"
+			],
+			[
+				"ser",
+				"serve404"
+			],
+			[
+				"serve",
+				"serve404"
+			],
+			[
+				"sty",
+				"style"
+			],
+			[
+				"into",
+				"introMode"
+			],
+			[
+				"service",
+				"serviceDiv"
+			],
+			[
+				"intr",
+				"introMode"
+			],
+			[
+				"posY",
+				"posYList"
+			],
+			[
+				"pos",
+				"posYList"
+			],
+			[
+				"scr",
+				"scrollVal"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/khangdinh/www/whachaeating/package.json",
+			"settings":
+			{
+				"buffer_size": 382,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Whatchaeatin'?</title>\n    <link rel=\"stylesheet\" href=\"css/bootstrap.css\" type=\"text/css\" />\n    <link rel=\"stylesheet\" href=\"css/animate.css\" type=\"text/css\" />\n    <link rel=\"stylesheet\" href=\"css/font-awesome.min.css\" type=\"text/css\" />\n    <link rel=\"stylesheet\" href=\"css/font.css\" type=\"text/css\" />\n    <link rel=\"stylesheet\" href=\"css/app.css\" type=\"text/css\" />\n    <!--[if lt IE 9]>\n      <script src=\"js/ie/html5shiv.js\"></script>\n      <script src=\"js/ie/respond.min.js\"></script>\n      <script src=\"js/ie/excanvas.js\"></script>\n    <![endif]-->\n  </head>\n  <body>\n    \n  </body>\n</html>",
+			"file": "/Users/khangdinh/www/whachaeating/raw/html/index.html",
+			"file_size": 393,
+			"file_write_time": 1406878399000000,
+			"settings":
+			{
+				"buffer_size": 643,
+				"line_ending": "Unix",
+				"name": "<!DOCTYPE html>"
+			}
+		},
+		{
+			"file": "/Users/khangdinh/www/whachaeating/note.txt",
+			"settings":
+			{
+				"buffer_size": 517,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/khangdinh/www/whachaeating/app.js",
+			"settings":
+			{
+				"buffer_size": 1507,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/khangdinh/Desktop/id_rsa_puresolutions_employees/cuong_id_rsa.pub",
+		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/0c810cc4-48cb-428a-84c7-84d373ae5c54/.git-ftp.log",
+		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/0c810cc4-48cb-428a-84c7-84d373ae5c54/public/Home/scripts/libs/library.js",
+		"/Users/khangdinh/Downloads/download",
+		"/Users/khangdinh/Desktop/routes.js",
+		"/Users/khangdinh/www/pureclassroom/raw/Kha/deprecated/views/inclass.ejs",
+		"/Users/khangdinh/www/pureclassroom/raw/Kha/deprecated/routes-auth/routes.js",
+		"/Users/khangdinh/www/pureclassroom/raw/Kha/PureEd/public/scripts/pureclassroom.js",
+		"/Users/khangdinh/www/pureclassroom/raw/Kha/PureEd/public/scripts/pureclassroomuser.js",
+		"/Users/khangdinh/www/pureclassroom/raw/Kha/PureEd/public/stylesheets/style.css",
+		"/Users/khangdinh/www/pureclassroom/raw/Kha/PureEd/views/index.ejs",
+		"/Users/khangdinh/www/pureclassroom/raw/Kha/PureEd/views/profile.ejs",
+		"/Users/khangdinh/www/pureclassroom/server/index.html",
+		"/Users/khangdinh/Desktop/github_rsa.pub",
+		"/Users/khangdinh/www/pureclassroom/webclient/public_html/sample/student.php",
+		"/Users/khangdinh/www/pureclassroom/webclient/public_html/sample/index.php",
+		"/Users/khangdinh/www/pureclassroom/webclient/public_html/sample/css/style.css",
+		"/Users/khangdinh/www/pureclassroom/webclient/public_html/scripts/socket.io.js",
+		"/Users/khangdinh/Downloads/mastersgolf.vn.css",
+		"/Users/khangdinh/Desktop/Copy/WORK/TKD/FiveSenses/raw/package-for-simulator-default.sh",
+		"/Users/khangdinh/www/pureclassroom/webclient/public_html/socket.io/.htaccess",
+		"/Users/khangdinh/www/pureclassroom/webclient/public_html/index.html",
+		"/Users/khangdinh/www/pureclassroom/webclient/index.html",
+		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/71f77486-42cc-43ae-973a-e2a4fb20e51e/var/www/openx/mobile/index.html",
+		"/Users/khangdinh/www/vivoAdDemo/public_html/scripts/flashobject.js",
+		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/991df93e-caa2-4011-8f36-64442d1ffe03/var/www/openx/vivoad2/index_shared.html",
+		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/71f77486-42cc-43ae-973a-e2a4fb20e51e/var/www/vivoad/public_html/index.html",
+		"/Users/khangdinh/www/vivoAdDemo/public_html/index_none.html",
+		"/Users/khangdinh/www/vivoAdDemo/index.html",
+		"/Users/khangdinh/www/vivoAdDemo/index_none.html",
+		"/Users/khangdinh/Desktop/jquery-openxtag-master/examples/spc-basic.html",
+		"/Users/khangdinh/Desktop/jquery-openxtag-master/examples/basic.html",
+		"/Users/khangdinh/Desktop/jquery-openxtag-master/examples/without-plugin.html",
+		"/Users/khangdinh/Desktop/secureSWF_v3pro_win_jre/key.data",
+		"/Users/khangdinh/www/vivoPlayerNHN/public_html/index_most.php",
+		"/Users/khangdinh/www/vivoPlayerNHN/public_html/index_standard.php",
+		"/Users/khangdinh/www/vivoPlayerNHN/public_html/index.php",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/002_Myself/Concussion/bin/dat/fivesensestraits.html",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/SerenityHoldings/www/css/login.css",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/SerenityHoldings/www/css/ie-5-fixes.css",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/SerenityHoldings/www/css/register.css",
+		"/Users/khangdinh/Desktop/small/login-icons.css",
+		"/Users/khangdinh/Desktop/httpd.conf",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/SerenityHoldings/www/css/login-ie.css",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/SerenityHoldings/raw/deprecated.css",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/ConceptCorner/www/adm/create.php",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/ConceptCorner/www/adm/Utils.php",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/ConceptCorner/logs/error_log",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/ConceptCorner/www/input.php",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/ConceptCorner/www/create.php",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/ConceptCorner/www/press/xmlrpc.php",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/ConceptCorner/www/press/wp-includes/class-wp-http-ixr-client.php",
+		"/private/etc/php.ini",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/ConceptCorner/www/press/create.php",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/ConceptCorner/www/press/wp-config.php",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/ConceptCorner/www/js/seph.selectable.js",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/ConceptCorner/www/index.html",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/ConceptCorner/www/index.php",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/ConceptCorner/www/js/main.js",
+		"/Users/khangdinh/Desktop/Copy/PROJECTS/ConceptCorner/info",
+		"/private/var/log/apache2/error_log",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/002_Myself/GostoRedesign/web/css/main.css",
+		"/Volumes/WORK/WORK/Zig-Zag/docs/domain.info",
+		"/Users/khangdinh/Desktop/goZones.json",
+		"/Users/khangdinh/RippleSites/WeekCalendar/www/config.xml",
+		"/Users/khangdinh/RippleSites/WeekCalendar/build.xml",
+		"/Users/khangdinh/RippleSites/WeekCalendar/blackberry.xml",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/001_PHONEGAP_PROJS/WeekCalendar/weekcalendar/project.properties",
+		"/Users/khangdinh/Desktop/ZigZag/Web/zigzag-career.py",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/RMIT_Tom_2013/deliverables/home.php",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/RMIT_Tom_2013/deliverables/policy.html",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/RMIT_Tom_2013/deliverables/sitemap.php",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/RMIT_Tom_2013/deliverables/register.php",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/RMIT_Tom_2013/deliverables/style.css",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/RMIT_Tom_2013/deliverables/products.php",
+		"/Users/khangdinh/Desktop/HTM/Company/num",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/RMIT_Tom_2013/deliverables/products.html",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/RMIT_Tom_2013/deliverables/sitemap.html",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/RMIT_Tom_2013/deliverables/home.html",
+		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/d0de48fc-18dc-4f53-9acd-d2f8018392a8/public_html/blog/wp-content/themes/apachyderm/style.css",
+		"/Users/khangdinh/Desktop/ZigZag/Web/css/utils",
+		"/Users/khangdinh/Desktop/test_25042013.html",
+		"/Volumes/WORK/PROJECTS/SephLearnsArduino/CarWifiController/CarWifiSocketController/CarWifiSocketController.ino",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/003_Sofresh/VendingMachineV2/bin/client.html",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/003_Sofresh/VendingMachineV2/bin/admin.html",
+		"/Users/khangdinh/Desktop/style.css",
+		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/d0de48fc-18dc-4f53-9acd-d2f8018392a8/public_html/blog/wp-content/themes/achiron/style.css",
+		"/Users/khangdinh/Desktop/24ways2008/app.yaml",
+		"/Users/khangdinh/Desktop/ZigZag/Web/app.yaml",
+		"/Library/WowzaMediaServer-3.5.2/conf/Server.license",
+		"/Applications/Red5.app/Contents/Resources/Java/webapps/vod/WEB-INF/red5-web.properties",
+		"/Applications/Red5.app/Contents/Resources/Java/webapps/vod/WEB-INF/red5-web.xml",
+		"/Users/khangdinh/Desktop/HTM/BannerChung/bin/js/expandableBannerChung.js",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/RMIT_Tom_2013/deliverables/index.html",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/RMIT_Tom_2013/deliverables/register.html",
+		"/Users/khangdinh/Desktop/ZigZag/Web/index.html",
+		"/Users/khangdinh/Desktop/ZigZag/Web/js/main.js",
+		"/Users/khangdinh/Desktop/idv_searches.html",
+		"/Users/khangdinh/Desktop/WORK_ON_DESKTOP/IDV_Sample/index.html",
+		"/Users/khangdinh/Desktop/ZigZag/Web/css/main.css",
+		"/Users/khangdinh/Desktop/ZigZag/Web/index.php",
+		"/Users/khangdinh/Desktop/HTM/BannerChung/bin/js/main.js",
+		"/Users/khangdinh/Desktop/HTM/testweb/test_vivo_ambient.html",
+		"/Users/khangdinh/Desktop/HTM/BannerChung/bin/index.html",
+		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/69d05622-9f8e-4512-b364-a60ec539d717/public_html/bken/services/dbinf",
+		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/69d05622-9f8e-4512-b364-a60ec539d717/public_html/bken/index.php",
+		"/Users/khangdinh/Desktop/passedon_error_pages/deliverables/error.html",
+		"/Users/khangdinh/Desktop/passedon_error_pages/error.html",
+		"/Users/khangdinh/Desktop/HTM/vivo_media_server_cost.txt",
+		"/Users/khangdinh/Desktop/vivo_media_server_cost.txt",
+		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/d0de48fc-18dc-4f53-9acd-d2f8018392a8/www/.htaccess",
+		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/40c2fde0-d2c4-4f83-9a30-0c23af8f6074/www/index.html",
+		"/Users/khangdinh/Desktop/ZigZag/Web/test/test_go_preroll.html",
+		"/Users/khangdinh/Desktop/test_go_preroll.html",
+		"/Users/khangdinh/Desktop/zigzagctrl/front/update.html",
+		"/Users/khangdinh/Desktop/zigzagctrl/responder.js",
+		"/Users/khangdinh/Desktop/zigzagctrl/testserver.js",
+		"/Users/khangdinh/Desktop/zigzagctrl/route.js",
+		"/Users/khangdinh/Desktop/testserver.js",
+		"/Users/khangdinh/Desktop/test_vivo_ambient.html",
+		"/Users/khangdinh/Desktop/test.html",
+		"/Users/khangdinh/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/khangdinh/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/b928a3eb-a35f-46df-b3db-854b505c0c39/etc/httpd/conf/httpd.conf",
+		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/b928a3eb-a35f-46df-b3db-854b505c0c39/etc/host.conf",
+		"/Users/khangdinh/Desktop/h5bp-html5-boilerplate-0a340fb/index.html",
+		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/e2eabd2e-79ea-4034-af06-70da862a0925/usr/local/WowzaMediaServer/conf/live/Application.xml",
+		"/private/etc/hosts"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"handleLogin",
+			"handleLo",
+			"handleLog",
+			"handleEditPersonalSettings",
+			"edit_personal_settings",
+			"handleLog",
+			"handleEditPersonalSettings",
+			"handleLog",
+			"handleLogin",
+			"handleJoinCourse",
+			"leavecour",
+			"handleGetCourses",
+			"handleCreateCourse",
+			"populate",
+			"handleGetAvailableCourses",
+			"doViewInsertAvailCourse\ndoViewInsertAvailCourse",
+			"doViewInsertAvailCourse\ndoViewInsertAvailCourse\ndoViewInsertAvailCourse",
+			"doViewInsertAvailCourse\ndoViewInsertAvailCourse",
+			"doViewInsertAvailCourse",
+			"handleAdminHardResetAllPasswords",
+			"available",
+			"handleGetCourses",
+			"handleGetAvailableCourses",
+			"handleAdminHardResetAllPasswords",
+			"handleLogin",
+			"register",
+			"handleGetAvailableCourses",
+			"findDocsByQuery",
+			"handleGetAvailableCourses",
+			"handleGetCourses",
+			"console.log(err)",
+			"config",
+			"common",
+			"handleGetSections",
+			"handleGetS",
+			"sections_b",
+			"sections",
+			"handleCreateCourse",
+			"findDocs",
+			"saveDoc",
+			"handleCreateCourse",
+			"course_create",
+			"handleGetCourses",
+			"isInstructor",
+			"handle_create_course",
+			"user_not_exist_message",
+			"handle_create_section",
+			"handle_create_assignment",
+			"handle_create_question",
+			"handle_get_questions",
+			"handle_create_course",
+			"course_create",
+			"user",
+			"start",
+			"answer",
+			"FILLING_THE_BLANK",
+			"questTitle",
+			"correct",
+			" \n",
+			"tags",
+			"bool",
+			"data",
+			"apis.google.com",
+			"onload=re",
+			"onload=ren",
+			"exam_level",
+			"TOEIC",
+			"'Open Sans'",
+			"Open",
+			"Tinos",
+			"Arial, 'Tinos'",
+			"'Tinos'",
+			"Roboto",
+			"roboto",
+			"start",
+			"receive",
+			"studentAnswer",
+			"subscribe",
+			"doAnswe",
+			"send",
+			"broadca",
+			"answer",
+			"none",
+			"appURI",
+			"PURE",
+			"initMultipleChoiceTest",
+			"message",
+			"subscribe",
+			"subsribe",
+			"register",
+			"subsribe",
+			"register",
+			"user.name",
+			"purecla",
+			"chat-logger",
+			"exports",
+			"ava",
+			"reg-for",
+			"social",
+			"first",
+			"sleeve",
+			"hide",
+			"ava",
+			"direct",
+			"line-he",
+			";\n",
+			"br",
+			"height",
+			"margin-bot",
+			"nicePrint",
+			"lang",
+			"setLang",
+			"lang",
+			"setLang",
+			"log",
+			"foot",
+			"wrapper",
+			"Hell yes",
+			"Read more",
+			"Vote down",
+			"Vote up",
+			"border",
+			"head",
+			"wrapper",
+			"homegal",
+			"head",
+			"scroll",
+			"240"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"console.error(err)",
+			"user_not_existed_message",
+			"theUser",
+			"FILLING_THE_BLANKS",
+			"questContent",
+			"Boolean",
+			"reqData",
+			"'Tinos'",
+			"'Open Sans'",
+			"Arial, 'Tinos'",
+			"Hell yes!!",
+			"Read more...",
+			"No way!",
+			"Hell yes",
+			"220",
+			"Tahoma",
+			"0f75bd",
+			"ZC",
+			":poop:",
+			"window.dat.serviceSectHeight",
+			"window.dat.introMode",
+			"window.dat.canScroll"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/khangdinh/www/whachaeating/package.json",
+					"settings":
+					{
+						"buffer_size": 382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/khangdinh/www/whachaeating/raw/html/index.html",
+					"settings":
+					{
+						"buffer_size": 643,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								601,
+								601
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<!DOCTYPE html>",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/khangdinh/www/whachaeating/note.txt",
+					"settings":
+					{
+						"buffer_size": 517,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								517,
+								517
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/khangdinh/www/whachaeating/app.js",
+					"settings":
+					{
+						"buffer_size": 1507,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1482,
+								1482
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 234.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 140.0,
+	"status_bar_visible": true
+}

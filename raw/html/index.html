@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Whatchaeatin'?</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font.css" type="text/css" />
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <link rel="stylesheet" href="whatchaeatin/css/main.css" type="text/css" />
+    <!--[if lt IE 9]>
+      <script src="js/ie/html5shiv.js"></script>
+      <script src="js/ie/respond.min.js"></script>
+      <script src="js/ie/excanvas.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <section class="vbox">
+      <header id="header" class="bg-warning dk header navbar navbar-fixed-top-xs">
+        <div class="navbar-header aside-md">
+          <a href="#" class="navbar-brand" data-toggle="fullscreen"><img src="whatchaeatin/whatchaeatin_icon_white_reverse_200.png" class="m-r-sm">Whatchaeatin'?</a>
+          <a class="btn btn-link visible-xs" data-toggle="collapse" data-target="#the-nav">
+            <i class="fa fa-cog"></i>
+          </a>
+          
+        </div>
+        <div class="collapse navbar-collapse in" id="the-nav">
+          <button id="surprise-me-btn" class="btn btn-danger navbar-btn" href="#"><strong>Surprise me</strong> <i class="fa fa-exclamation"></i></button>
+          <ul class="nav navbar-nav navbar-right">
+            <!--<li><a href="#">Link</a></li>-->
+            <!--<li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quickies <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">-->
+                <!--<li><button class="btn btn-danger navbar-btn" href="#"><strong>Surprise me</strong> <i class="fa fa-exclamation"></i></button></li>-->
+                <!--<li><a href="#">Another action</a></li>-->
+                <!--<li class="divider"></li>
+                <li><a href="#">Settings</a></li>-->
+                <li><a href="#"><i class="fa fa-sign-out"></i> Sign out</a></li>
+              <!--</ul>
+            </li>-->
+          </ul>
+        </div>
+      </header>
+    
+      <!--<section class="panel">
+        <section class="paper">
+          <textarea type="text" class="form-control scrollable" placeholder="Type your note here"></textarea>
+        </section>
+      </section>-->
+
+      <section id="container" class="scrollable wrapper w-f">
+        <div id="conversation">
+          <ul>
+            <li>Eat with a friend?</li>
+            <li>
+              <a href="#" onclick="fadeOut($(this));query();" class="text-info"><i class="fa fa-fw fa-check-circle"></i></a>
+              <a href="#" onclick="fadeOut($(this));query();" class="text-danger"><i class="fa fa-fw fa-times-circle"></i></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <footer id="footer" class="footer bg-white b-t b-light">
+        <p id="footer-text">Stalking...</p>
+      </footer>
+
+    </section>
+
+    <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.js"></script>
+    <!-- App -->
+    <script src="js/app.js"></script> 
+    <script src="js/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="js/libs/underscore-min.js"></script>
+
+    <!-- Whatchaeatin -->
+    <script src="whatchaeatin/js/main.js"></script>
+
+    <!--<script src="js/libs/backbone-min.js"></script>
+    <script src="js/libs/backbone.localStorage-min.js"></script>
+    <script src="js/libs/moment.min.js"></script>-->
+    <!-- Notes -->
+    <!--<script src="js/apps/notes.js"></script>
+    <script src="js/app.plugin.js"></script>-->
+  </body>
+</html>
