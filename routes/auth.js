@@ -40,4 +40,30 @@ router.post('/register', function(req, res) {
 
 // router.use('/', expressJwt({ secret : secret }));
 
+router.put('/update_profile', function(req, res) {
+  var username = req.user.username;
+  User.findOne({ username : username}, function(err, user) {
+    if (!err) {
+      if (!user) {
+        res.json(400, { message : 'This user does not exist.'});
+      } else {
+        user.on_a_diet = req.body.profile.on_a_diet || user.on_a_diet;
+        user.is_a_vegan = req.body.profile.is_a_vegan || user.is_a_vegan;
+        user.allergic_to_peanut = req.body.profile.allergic_to_peanut || user.allergic_to_peanut;
+        user.allergic_to_sesami = req.body.profile.allergic_to_sesami || user.allergic_to_sesami;
+
+        user.save(function(err) {
+          if (!err) {
+            res.json({ message : 'User profile has been updated' });
+          } else {
+            res.json(500, { message : 'Cannot save user profile' });
+          }
+        });
+      }
+    } else {
+      res.json(500, { message : 'Something is wrong.'});
+    }
+  });
+});
+
 module.exports = router;

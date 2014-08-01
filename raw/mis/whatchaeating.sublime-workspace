@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"con",
+				"console"
+			],
+			[
+				"safe",
+				"safeMargin"
+			],
+			[
+				"pre",
+				"prepConv"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
 				"res",
 				"res"
 			],
@@ -296,10 +312,6 @@
 				"font-size"
 			],
 			[
-				"list",
-				"list-style-type"
-			],
-			[
 				"backgrou",
 				"background"
 			],
@@ -502,59 +514,11 @@
 			[
 				"intr",
 				"introMode"
-			],
-			[
-				"posY",
-				"posYList"
-			],
-			[
-				"pos",
-				"posYList"
-			],
-			[
-				"scr",
-				"scrollVal"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "/Users/khangdinh/www/whachaeating/package.json",
-			"settings":
-			{
-				"buffer_size": 382,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Whatchaeatin'?</title>\n    <link rel=\"stylesheet\" href=\"css/bootstrap.css\" type=\"text/css\" />\n    <link rel=\"stylesheet\" href=\"css/animate.css\" type=\"text/css\" />\n    <link rel=\"stylesheet\" href=\"css/font-awesome.min.css\" type=\"text/css\" />\n    <link rel=\"stylesheet\" href=\"css/font.css\" type=\"text/css\" />\n    <link rel=\"stylesheet\" href=\"css/app.css\" type=\"text/css\" />\n    <!--[if lt IE 9]>\n      <script src=\"js/ie/html5shiv.js\"></script>\n      <script src=\"js/ie/respond.min.js\"></script>\n      <script src=\"js/ie/excanvas.js\"></script>\n    <![endif]-->\n  </head>\n  <body>\n    \n  </body>\n</html>",
-			"file": "/Users/khangdinh/www/whachaeating/raw/html/index.html",
-			"file_size": 393,
-			"file_write_time": 1406878399000000,
-			"settings":
-			{
-				"buffer_size": 643,
-				"line_ending": "Unix",
-				"name": "<!DOCTYPE html>"
-			}
-		},
-		{
-			"file": "/Users/khangdinh/www/whachaeating/note.txt",
-			"settings":
-			{
-				"buffer_size": 517,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/khangdinh/www/whachaeating/app.js",
-			"settings":
-			{
-				"buffer_size": 1507,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -580,6 +544,18 @@
 	},
 	"file_history":
 	[
+		"/Users/khangdinh/www/whachaeating/package.json",
+		"/Users/khangdinh/www/whachaeating/raw/html/index.html",
+		"/Users/khangdinh/www/whachaeating/raw/html/whatchaeatin/css/main.css",
+		"/Users/khangdinh/www/whachaeating/raw/html/whatchaeatin/js/main.js",
+		"/Users/khangdinh/www/whachaeating/raw/html/js/app.js",
+		"/Users/khangdinh/www/whachaeating/raw/html/js/apps/notes.js",
+		"/Users/khangdinh/www/whachaeating/raw/html/css/app.css",
+		"/Users/khangdinh/www/whachaeating/note.txt",
+		"/Users/khangdinh/www/whachaeating/routes/auth.js",
+		"/Users/khangdinh/www/whachaeating/app.js",
+		"/Users/khangdinh/www/whachaeating/raw/html/logs/access_log",
+		"/Users/khangdinh/www/whachaeating/raw/html/css/whatchaeatin.css",
 		"/Users/khangdinh/Desktop/id_rsa_puresolutions_employees/cuong_id_rsa.pub",
 		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/0c810cc4-48cb-428a-84c7-84d373ae5c54/.git-ftp.log",
 		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/0c810cc4-48cb-428a-84c7-84d373ae5c54/public/Home/scripts/libs/library.js",
@@ -695,19 +671,7 @@
 		"/Users/khangdinh/Desktop/ZigZag/Web/test/test_go_preroll.html",
 		"/Users/khangdinh/Desktop/test_go_preroll.html",
 		"/Users/khangdinh/Desktop/zigzagctrl/front/update.html",
-		"/Users/khangdinh/Desktop/zigzagctrl/responder.js",
-		"/Users/khangdinh/Desktop/zigzagctrl/testserver.js",
-		"/Users/khangdinh/Desktop/zigzagctrl/route.js",
-		"/Users/khangdinh/Desktop/testserver.js",
-		"/Users/khangdinh/Desktop/test_vivo_ambient.html",
-		"/Users/khangdinh/Desktop/test.html",
-		"/Users/khangdinh/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/Users/khangdinh/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/b928a3eb-a35f-46df-b3db-854b505c0c39/etc/httpd/conf/httpd.conf",
-		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/b928a3eb-a35f-46df-b3db-854b505c0c39/etc/host.conf",
-		"/Users/khangdinh/Desktop/h5bp-html5-boilerplate-0a340fb/index.html",
-		"/private/var/folders/g_/p2y3bwmx7k5f13mdr8s5bt1r0000gn/T/e2eabd2e-79ea-4034-af06-70da862a0925/usr/local/WowzaMediaServer/conf/live/Application.xml",
-		"/private/etc/hosts"
+		"/Users/khangdinh/Desktop/zigzagctrl/responder.js"
 	],
 	"find":
 	{
@@ -725,6 +689,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"note",
+			"moment",
+			"date",
 			"handleLogin",
 			"handleLo",
 			"handleLog",
@@ -849,10 +816,7 @@
 			"border",
 			"head",
 			"wrapper",
-			"homegal",
-			"head",
-			"scroll",
-			"240"
+			"homegal"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -892,120 +856,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/Users/khangdinh/www/whachaeating/package.json",
-					"settings":
-					{
-						"buffer_size": 382,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/khangdinh/www/whachaeating/raw/html/index.html",
-					"settings":
-					{
-						"buffer_size": 643,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								601,
-								601
-							]
-						],
-						"settings":
-						{
-							"auto_name": "<!DOCTYPE html>",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/khangdinh/www/whachaeating/note.txt",
-					"settings":
-					{
-						"buffer_size": 517,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								517,
-								517
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/Users/khangdinh/www/whachaeating/app.js",
-					"settings":
-					{
-						"buffer_size": 1507,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1482,
-								1482
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 234.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],

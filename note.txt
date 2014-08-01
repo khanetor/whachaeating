@@ -20,7 +20,7 @@ Are you allergic to peanuts?
 Are you allergic to sesame?
 
 
-Eat with a friend? (fance)
+Eat with a friend? (fancy)
 Within walking distance? (quick)
 
 Want rice? (rice)
