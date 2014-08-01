@@ -5,8 +5,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// DB
+var mongoose = require('mongoose');
+var mongodb = process.env.MONGOLAB_URI || "mongodb://heroku_app28010685:3pufvvkeildjosl127g2oapkr@ds059908.mongolab.com:59908/heroku_app28010685";
+mongoose.connect(mongodb);
+
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var auth = require('./routes/auth')
 var foodspot = require('./routes/foodspot');
 
 var app = express();
@@ -23,7 +28,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/foodspotapi', auth);
 app.use('/foodspotapi', foodspot);
 
 /// catch 404 and forward to error handler
