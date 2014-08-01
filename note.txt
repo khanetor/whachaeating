@@ -2,3 +2,19 @@ http://www.foodspotting.com/find/in/Ho-Chi-Minh-City-H%E1%BB%93-Ch%C3%AD-Minh-Vi
 http://www.foodspotting.com/find/best/bun-mam/in/Ho-Chi-Minh-City-H%E1%BB%93-Ch%C3%AD-Minh-Vietnam
 
 http://www.foodspotting.com/api/v1/sightings.json?api_key=88jrlU7j4HsTnnVNciqhfZbXd6vgPmVU9gbu46Mh&query=Bun%20Bo&sort=best&filter=all&latitude=10.8230989&longitude=106.6296638&ne=11.1602136%2C107.02484679999998&sw=10.3766885%2C106.36387839999998&per_page=16&page=1&callback=jQuery18205398014166858047_1406878634392&_=1406878884116
+
+List of questions we can start with:
+
+Ask everytime:
+So, eating with a friend?
+Want it quick?
+Do you want rice?
+
+Do you want noodle?
+Do you want soup?
+
+Ask for profile:
+Are you on a diet?
+Are you a vegan?
+Are you allergic to peanuts?
+Are you allergic to sesame?
