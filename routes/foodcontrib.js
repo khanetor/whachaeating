@@ -18,7 +18,8 @@ router.post('/questions', function(req, res) {
   var newQuestion = new Question();
   newQuestion.text = req.body.question.text;
   newQuestion.tag = req.body.question.tag;
-  
+  newQuestion.for_profile = req.body.question.for_profile;
+
   newQuestion.save(function(err) {
     if (!err) {
       res.json({ message : 'Your question is saved!', question : newQuestion });
@@ -36,6 +37,8 @@ router.put('/questions/:id', function(req, res) {
       } else {
         question.text = req.body.question.text;
         question.tag = req.body.question.tag;
+        question.for_profile = req.body.question.for_profile
+
         question.save(function(err) {
           if (!err) {
             res.json({ message : 'Your question is updated!', question : question });
@@ -67,14 +70,13 @@ router.get('/foods', function(req, res) {
 });
 
 router.post('/foods', function(req, res) {
-  console.log(req.body);
   var newFood = new Food();
   newFood.food_name = req.body.food.food_name;
   newFood.tags = req.body.food.tags;
   newFood.price_lower = req.body.food.price_lower;
   newFood.price_upper = req.body.food.price_upper;
   newFood.allergies = req.body.food.allergies;
-  
+
   newFood.save(function(err) {
     if (!err) {
       res.json({ message : 'Your question is saved!', food : newFood });

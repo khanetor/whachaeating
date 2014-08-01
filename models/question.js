@@ -1,8 +1,9 @@
 var mongoose = require('mongoose');
 
 var questionSchema = mongoose.Schema({
-  text : { type : String, required : true, unique : true },
-  tag  : String
+  text        : { type : String, required : true, unique : true },
+  tag         : String,
+  for_profile : { type : Boolean, default : false }
 });
 
 var questionModel = mongoose.model('Question', questionSchema);
