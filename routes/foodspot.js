@@ -4,14 +4,14 @@ var router = express.Router();
 var foodspot_factory = require('../FoodSpottingApi/foodspot_factory');
 
 router.get('/', function(req, res) {
-  var tags = req.body.tags;
-  tags.forEach(function(tag, index) {
-    
+  foodspot_factory.search('', '10.7721885', '106.65396659999999', function(foodspotJSON) {
+    res.json(foodspotJSON);
   });
 });
 
+
 router.get('/:food', function(req, res) {
-	foodspot_factory.search(req.params.food, '', '', function(foodspotJSON) {
+	foodspot_factory.search(req.params.food, '10.7721885', '106.65396659999999', function(foodspotJSON) {
 		res.json(foodspotJSON);
 	});
 });
