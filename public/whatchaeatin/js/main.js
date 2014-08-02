@@ -1,9 +1,11 @@
 var geoLoc = {};
 var safeToGo = true;
 var questions = [];
-var curQuestion = "";
+var curQuestion = null;
+var curQuestionId = 0;
 var curResult = [];
 var curId = 0;
+var tags = [];
 
 $(function() {
 
@@ -25,6 +27,9 @@ function setupHome() {
 	}, 5000);
 }
 
+/*
+ * display all food fetched into curResult
+ */
 function parseFood(start) {
 
 	//var caro = $('#caro');
@@ -60,10 +65,13 @@ function parseFood(start) {
 	// goal: <li><img class="img-thumbnail" src="images/whatchaeatin_icon_200.png" /></li>
 	var i = start;
 	var lim = Math.min(curResult.length-1, start+3);
+	console.log(lim);
 	for(i; i<lim; i++) {
 		var food = curResult[i];
+		//console.log(food);
 		//console.log(food.current_review.thumb_280);
 		var theImg = $('<li><img class="img-thumbnail" src="'+food.current_review.thumb_280+'" /></li>');
+		//console.log(theImg);
 		//theImg.fadeTo(0,0);
 		sel.append(theImg);
 		//theImg.animate({
@@ -79,10 +87,10 @@ function getFood(req) {
 		req = '';
 	$.ajax({
 		type: 'get',
-		url: '/foodapi',
+		url: '/foodapi/food',
 		success: function(data, text, xhr) {
 			if(data && data.length > 0) {
-				curResult = curResult.concat(data);
+				curResult = curResult.concat(data); // note that we may not want to use concat here
 				//console.log('Current batch:');
 				//console.log(curResult);
 				parseFood();
@@ -103,6 +111,9 @@ function getQuestions() {
 			questions = data.questions;
 			console.log('Questions:');
 			console.log(questions);
+
+			query(questions[0]);
+
 		},
 		error: function(xhr, text, err) {
 			console.log(err);
@@ -114,30 +125,111 @@ function getQuestions() {
  * user responds
  */
 function choose(question, answer, cb) {
-	console.log('Question '+question+' was answered: '+answer);
-	$.ajax({
-		type: 'get',
-		url: '/foodapi/bun-bo',
-		success: function(data, text, xhr) {
-			if(data) {
-				curResult = curResult.concat(data);
-				console.log(curResult);
+	
+	console.log('Question '+question.text+' was answered: '+answer);
+	// yes = 1 ; no = 0
+
+	if(answer == 1) {
+		$.ajax({
+			type: 'get',
+			url: '/foodapi/question/'+question._id,
+			success: function(data, text, xhr) {
+				if(xhr.status == 200) {
+					console.log('HEEEEEERE '+xhr.status);
+					if(tags.indexOf(data.tag) < 0) {
+						console.log('/foodapi/question/'+question._id);
+						console.log(data.tag);
+						tags.push(data.tag);
+					}
+
+					// TODO: refresh food list
+					parseFoodFromAllTags();
+				} else {
+					console.log('Incident: '+xhr.status);
+				}
+			},
+			error: function(xhr, text, err) {
+				console.log(err);
 			}
-			//console.log(data);
-			console.log(cb);
-			if(cb != null)
-				cb.call();
+		})
+	}
+	
+	curQuestionId++;
+	if(curQuestionId < questions.length) {
+		query(questions[curQuestionId]);
+	}
+	else {
+		// end game
+		parseFoodFromAllTags();
+	}
+}
+
+/**
+ * this is for end game and once every time a question is answered
+ */
+function parseFoodFromAllTags() {
+	
+	curResult = [];
+
+	//var tagQS = "";
+	var o = 0;
+	for(var k in tags) {
+		//tagQS += "&tags[]="+tags[k];
+		var theUrl = '/foodapi/tag/'+tags[k]+'/'+geoLoc.lat+'/'+geoLoc.long;
+		console.log('Tag URL: '+theUrl);
+		try {
+		$.ajax({
+			type: 'get',
+			url: theUrl,
+			success: function(data, text, xhr) {
+				if(xhr.status == 200) {
+					console.log(xhr);
+					o++;
+					console.log(o);
+					console.log(data);
+					curResult = curResult.concat(data);
+					if(o == tags.length) {
+						console.log('Got final result');
+						console.log(curResult);
+						parseFood();
+					}
+				} else {
+					console.log('Incident: '+xhr.status);
+				}
+			},
+			error: function(xhr, text, err) {
+				o++;
+				console.log("Loi! "+err);
+			}
+		});
+		} catch(error) {
+			console.log("Sob");
+		}
+	}
+
+	//var theUrl = '/foodapi/tag/'+geoLoc.lat+'/'+geoLoc.long+'/?tags='+tagQS;
+	
+	//console.log(theUrl);
+
+	/*$.ajax({
+		type: 'get',
+		url: theUrl,
+		success: function(data) {
+			curResult = data;
+			console.log('Got final result');
+			console.log(data);
+			parseFood();
 		},
 		error: function(xhr, text, err) {
 			console.log(err);
 		}
-	});
+	});*/
 }
 
 /**
  * machine asks
  */
-function query(info, cb) {
+function query(q, cb) {
 
 	// we dont want this feature to be spammed do we?
 	if(!safeToGo) {
@@ -145,12 +237,12 @@ function query(info, cb) {
 		return false;
 	}
 
-	if(!info) {
-		info = {
-			question: "Embarrasing... I don't know what to eat :("
+	if(!q) {
+		q = {
+			text: "Embarrasing... I don't know what to eat :("
 		};
 	}
-	curQuestion = info.question;
+	curQuestion = q;
 
 	// clear up some space
 	var toWait = clearConv();
@@ -166,7 +258,7 @@ function query(info, cb) {
 
   // load & display new stuff
   var conv = $('#conversation ul');
-  var question = prepConv($("<li>"+info.question+"</li>"));
+  var question = prepConv($("<li>"+q.text+"</li>"));
   var answer = prepConv($('<li>\
   							<a href="#" onclick="choose(curQuestion,1,function(){fadeOut($(this))});" class="text-info"><i class="fa fa-fw fa-check-circle"></i></a>\
   							<a href="#" onclick="choose(curQuestion,0,function(){fadeOut($(this))});" class="text-danger"><i class="fa fa-fw fa-times-circle"></i></a>\
