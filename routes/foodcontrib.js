@@ -72,7 +72,12 @@ router.get('/foods', function(req, res) {
 router.post('/foods', function(req, res) {
   var newFood = new Food();
   newFood.food_name = req.body.food.food_name;
-  newFood.tags = req.body.food.tags;
+  // console.log(req.body.food.tags.split(","));
+  var tags = req.body.food.tags.split(",");
+  tags.forEach(function(tag, index) {
+    newFood.tags.push(tag);
+  });
+
   newFood.price_lower = req.body.food.price_lower;
   newFood.price_upper = req.body.food.price_upper;
   newFood.allergies = req.body.food.allergies;
