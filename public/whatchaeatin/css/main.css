@@ -31,3 +31,19 @@ body, html {
 	overflow: hidden;
 	margin-bottom: 40px;
 }
+.gal-ico {
+	position: absolute;
+	display: block;
+	z-index: 999;
+	top: 30px;
+}
+.left-arr {
+	left: 0;
+}
+.right-arr {
+	right: 0;
+}
+.gal-la {
+	width: 100%;
+	text-align: center;
+}

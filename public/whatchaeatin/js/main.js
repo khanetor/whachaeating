@@ -9,22 +9,24 @@ var tags = [];
 
 $(function() {
 
-	// we're a location-based app, what else to expect first?
-	getLocation();
+  // we're a location-based app, what else to expect first?
+  getLocation();
 
-	// for the rushed nature of the project, let's just put everything
-	// here instead of doing a proper MVC ;)
-	setupHome();
+  // for the rushed nature of the project, let's just put everything
+  // here instead of doing a proper MVC ;)
+  setupHome();
 
-	getQuestions();
+  // we'll need a list of questions to find out what our users want
+  getQuestions();
 
 });
 
 function setupHome() {
-	$('#surprise-me-btn').hide();
-	setTimeout(function() {
-		$('#surprise-me-btn').fadeIn();
-	}, 5000);
+  $('#surprise-me-btn').hide();
+  setTimeout(function() {
+    $('#surprise-me-btn').fadeIn();
+  }, 5000);
+  $('.left-arr, .right-arr').hide();
 }
 
 /*
@@ -32,198 +34,196 @@ function setupHome() {
  */
 function parseFood(start) {
 
-	//var caro = $('#caro');
-	/*
-	<div class="item active">
-		<img src="..." alt="...">
-		<div class="carousel-caption">
-			...
-		</div>
-	</div>
-	*/
+  if(!start)
+    start = 0;
 
-	/*caro.html('');
-	for(var j=0; j<curResult.length; j++) {
-		var theFood = curResult[j];
-		//console.log(food.current_review.thumb_280);
-		var itm = $('<div class="item">\
-			<img src="'+theFood.current_review.thumb_280+'" alt="'+theFood.item.name+'">\
-			<div class="carousel-caption">'+theFood.item.name+'</div>\
-		</div>');
-		caro.append(theFood);
-	}*/
+  if(start < 0)
+    start = 0;
 
-
-	if(!start)
-		start = 0;
-
-	if(start < 0)
-		start = 0;
-
-	var sel = $('ul.selections');
-	sel.html('');
-	// goal: <li><img class="img-thumbnail" src="images/whatchaeatin_icon_200.png" /></li>
-	var i = start;
-	var lim = Math.min(curResult.length-1, start+3);
-	console.log(lim);
-	for(i; i<lim; i++) {
-		var food = curResult[i];
-		//console.log(food);
-		//console.log(food.current_review.thumb_280);
-		var theImg = $('<li><img class="img-thumbnail" src="'+food.current_review.thumb_280+'" /></li>');
-		//console.log(theImg);
-		//theImg.fadeTo(0,0);
-		sel.append(theImg);
-		//theImg.animate({
-		//	opacity: 1
-		//}, Math.floor(Math.random()*600));
-	}
-	curId = i;
-	resize();
+  var sel = $('ul.selections');
+  sel.html('');
+  // goal: <li><img class="img-thumbnail" src="images/whatchaeatin_icon_200.png" /></li>
+  var i = start;
+  var lim = Math.min(curResult.length-1, start+3);
+  console.log(lim);
+  for(i; i<lim; i++) {
+    var food = curResult[i];
+    //console.log(food);
+    //console.log(food.current_review.thumb_280);
+    var theImg = $('<li><img class="img-thumbnail" src="'+food.current_review.thumb_280+'" /></li>');
+    //console.log(theImg);
+    //theImg.fadeTo(0,0);
+    sel.append(theImg);
+    //theImg.animate({
+    //  opacity: 1
+    //}, Math.floor(Math.random()*600));
+  }
+  curId = i;
+  resize();
 }
 
+/**
+ * mostly used upon first login
+ * to grab a bunch of food and please the eyes of our uers
+ */
 function getFood(req) {
-	if(!req)
-		req = '';
-	$.ajax({
-		type: 'get',
-		url: '/foodapi/food',
-		success: function(data, text, xhr) {
-			if(data && data.length > 0) {
-				curResult = curResult.concat(data); // note that we may not want to use concat here
-				//console.log('Current batch:');
-				//console.log(curResult);
-				parseFood();
-			}
-		},
-		error: function(xhr, text, err) {
-			console.log(err);
-			query(); // sad response...
-		}
-	});
+  
+  if(!req)
+    req = '';
+
+  $.ajax({
+    type: 'get',
+    url: '/foodapi/food',
+    success: function(data, text, xhr) {
+      if(data && data.length > 0) {
+        curResult = curResult.concat(data); // note that we may not want to use concat here
+        
+        //console.log('Current batch:');
+        //console.log(curResult);
+
+        $('.left-arr, .right-arr').show();
+        $('.gal-la').hide();
+
+        parseFood();
+      }
+    },
+    error: function(xhr, text, err) {
+      console.log(err);
+      query(); // sad response...
+    }
+  });
 }
 
 function getQuestions() {
-	$.ajax({
-		type: 'get',
-		url: '/foodcontribapi/questions',
-		success: function(data, text, xhr) {
-			questions = data.questions;
-			console.log('Questions:');
-			console.log(questions);
+  $.ajax({
+    type: 'get',
+    url: '/foodcontribapi/questions',
+    success: function(data, text, xhr) {
+      questions = data.questions;
+      console.log('Questions:');
+      console.log(questions);
 
-			query(questions[0]);
+      query(questions[0]);
 
-		},
-		error: function(xhr, text, err) {
-			console.log(err);
-		}
-	});
+    },
+    error: function(xhr, text, err) {
+      console.log(err);
+    }
+  });
 }
 
 /**
  * user responds
  */
 function choose(question, answer, cb) {
-	
-	console.log('Question '+question.text+' was answered: '+answer);
-	// yes = 1 ; no = 0
+  
+  console.log('Question '+question.text+' was answered: '+answer);
+  // yes = 1 ; no = 0
 
-	if(answer == 1) {
-		$.ajax({
-			type: 'get',
-			url: '/foodapi/question/'+question._id,
-			success: function(data, text, xhr) {
-				if(xhr.status == 200) {
-					console.log('HEEEEEERE '+xhr.status);
-					if(tags.indexOf(data.tag) < 0) {
-						console.log('/foodapi/question/'+question._id);
-						console.log(data.tag);
-						tags.push(data.tag);
-					}
+  if(answer == 1) { // to do: do we actually need to use '1' here? ;) it's business logic tho.
+    $.ajax({
+      type: 'get',
+      url: '/foodapi/question/'+question._id,
+      success: function(data, text, xhr) {
+        if(xhr.status == 200) {
+          console.log('xhr status: '+xhr.status);
+          if(tags.indexOf(data.tag) < 0) {
+            console.log('/foodapi/question/'+question._id);
+            console.log(data.tag);
+            tags.push(data.tag);
+          }
 
-					// TODO: refresh food list
-					parseFoodFromAllTags();
-				} else {
-					console.log('Incident: '+xhr.status);
-				}
-			},
-			error: function(xhr, text, err) {
-				console.log(err);
-			}
-		})
-	}
-	
-	curQuestionId++;
-	if(curQuestionId < questions.length) {
-		query(questions[curQuestionId]);
-	}
-	else {
-		// end game
-		parseFoodFromAllTags();
-	}
+          // refresh food list
+          parseFoodFromAllTags();
+
+        } else {
+          console.log('Incident: '+xhr.status);
+        }
+      },
+      error: function(xhr, text, err) {
+        console.log(err);
+      }
+    })
+  }
+  
+  curQuestionId++;
+  if(curQuestionId < questions.length) {
+    query(questions[curQuestionId]);
+  }
+  else {
+    // end game (no more questions)
+    parseFoodFromAllTags();
+  }
 }
 
 /**
  * this is for end game and once every time a question is answered
  */
 function parseFoodFromAllTags() {
-	
-	curResult = [];
+  
+  curResult = [];
 
-	//var tagQS = "";
-	var o = 0;
-	for(var k in tags) {
-		//tagQS += "&tags[]="+tags[k];
-		var theUrl = '/foodapi/tag/'+tags[k]+'/'+geoLoc.lat+'/'+geoLoc.long;
-		console.log('Tag URL: '+theUrl);
-		try {
-		$.ajax({
-			type: 'get',
-			url: theUrl,
-			success: function(data, text, xhr) {
-				if(xhr.status == 200) {
-					console.log(xhr);
-					o++;
-					console.log(o);
-					console.log(data);
-					curResult = curResult.concat(data);
-					if(o == tags.length) {
-						console.log('Got final result');
-						console.log(curResult);
-						parseFood();
-					}
-				} else {
-					console.log('Incident: '+xhr.status);
-				}
-			},
-			error: function(xhr, text, err) {
-				o++;
-				console.log("Loi! "+err);
-			}
-		});
-		} catch(error) {
-			console.log("Sob");
-		}
-	}
+  $('.gal-la').show();
 
-	//var theUrl = '/foodapi/tag/'+geoLoc.lat+'/'+geoLoc.long+'/?tags='+tagQS;
-	
-	//console.log(theUrl);
+  //var tagQS = "";
+  var o = 0;
+  for(var k in tags) {
+    //tagQS += "&tags[]="+tags[k];
+    var theUrl = '/foodapi/tag/'+tags[k]+'/'+geoLoc.lat+'/'+geoLoc.long;
+    console.log('Tag URL: '+theUrl);
+    try {
+    $.ajax({
+      type: 'get',
+      url: theUrl,
+      success: function(data, text, xhr) {
+        if(xhr.status == 200) {
+          console.log('xhr status: '+xhr);
+          o++;
+          //console.log(o);
+          //console.log(data);
+          curResult = curResult.concat(data);
+          if(o == tags.length) {
+            console.log('Got final result');
+            console.log(curResult);
 
-	/*$.ajax({
-		type: 'get',
-		url: theUrl,
-		success: function(data) {
-			curResult = data;
-			console.log('Got final result');
-			console.log(data);
-			parseFood();
-		},
-		error: function(xhr, text, err) {
-			console.log(err);
-		}
-	});*/
+            $('.gal-la').hide();
+
+            parseFood();
+          }
+        } else {
+          console.log('Incident: '+xhr.status);
+        }
+      },
+      error: function(xhr, text, err) {
+        o++;
+        console.log("Loi! "+err);
+      }
+    });
+    } catch(error) {
+      console.log("Sob");
+    }
+  }
+
+
+  // DEPRECATED BUT KEPT HERE FOR REFERENCE PURPOSE
+  //var theUrl = '/foodapi/tag/'+geoLoc.lat+'/'+geoLoc.long+'/?tags='+tagQS;
+  
+  //console.log(theUrl);
+
+  /*$.ajax({
+    type: 'get',
+    url: theUrl,
+    success: function(data) {
+      curResult = data;
+      console.log('Got final result');
+      console.log(data);
+      parseFood();
+    },
+    error: function(xhr, text, err) {
+      console.log(err);
+    }
+  });*/
+  // END DEPRECATED BLOCK
 }
 
 /**
@@ -231,24 +231,24 @@ function parseFoodFromAllTags() {
  */
 function query(q, cb) {
 
-	// we dont want this feature to be spammed do we?
-	if(!safeToGo) {
-		console.log('Save yer horses ;)');
-		return false;
-	}
+  // we dont want this feature to be spammed do we?
+  if(!safeToGo) {
+    console.log('Save yer horses ;)');
+    return false;
+  }
 
-	if(!q) {
-		q = {
-			text: "Embarrasing... I don't know what to eat :("
-		};
-	}
-	curQuestion = q;
+  if(!q) {
+    q = {
+      text: "Embarrasing... I don't know what to eat :("
+    };
+  }
+  curQuestion = q;
 
-	// clear up some space
-	var toWait = clearConv();
+  // clear up some space
+  var toWait = clearConv();
 
-	// #conversation has the following content struct:
-	// <ul>
+  // #conversation has the following content struct:
+  // <ul>
   //   <li>Eat with a friend?</li>
   //   <li>
   //     <a class="text-info"><i class="fa fa-fw fa-check-circle"></i></a>
@@ -260,44 +260,44 @@ function query(q, cb) {
   var conv = $('#conversation ul');
   var question = prepConv($("<li>"+q.text+"</li>"));
   var answer = prepConv($('<li>\
-  							<a href="#" onclick="choose(curQuestion,1,function(){fadeOut($(this))});" class="text-info"><i class="fa fa-fw fa-check-circle"></i></a>\
-  							<a href="#" onclick="choose(curQuestion,0,function(){fadeOut($(this))});" class="text-danger"><i class="fa fa-fw fa-times-circle"></i></a>\
-  						</li>'));
+                <a href="#" onclick="choose(curQuestion,1,function(){fadeOut($(this))});" class="text-info"><i class="fa fa-fw fa-check-circle"></i></a>\
+                <a href="#" onclick="choose(curQuestion,0,function(){fadeOut($(this))});" class="text-danger"><i class="fa fa-fw fa-times-circle"></i></a>\
+              </li>'));
   setTimeout(function() {
 
-  	conv.append(question);
-  	conv.append(answer);
-  	resize();
+    conv.append(question);
+    conv.append(answer);
+    resize();
 
-  	var maxDur = 0;
-  	safeToGo = false;
-  	$('#conversation > ul > li').each(function() {
-  		var delay = Math.floor(Math.random()*500);
-  		maxDur = Math.max(maxDur, delay);
-  		var theLi = $(this);
-  		setTimeout(function() {
-  			theLi.css('top','+50px');
-    		theLi.animate({
-    			top: "-=50px",
-    			opacity: 1
-    		}, 500);
-    	}, delay);
-  	});
-  	setTimeout(function() {
-  		console.log('Now safe to go');
-  		safeToGo = true;
-  	}, maxDur+800);
+    var maxDur = 0;
+    safeToGo = false;
+    $('#conversation > ul > li').each(function() {
+      var delay = Math.floor(Math.random()*500);
+      maxDur = Math.max(maxDur, delay);
+      var theLi = $(this);
+      setTimeout(function() {
+        theLi.css('top','+50px');
+        theLi.animate({
+          top: "-=50px",
+          opacity: 1
+        }, 500);
+      }, delay);
+    });
+    setTimeout(function() {
+      console.log('Now safe to go');
+      safeToGo = true;
+    }, maxDur+800);
   }, toWait);
 
   /**
    * helper function to prepare the target (question or answer) for animation
    */
   function prepConv(target) {
-  	return $(target).fadeTo(0,0);
+    return $(target).fadeTo(0,0);
   }
 
-	if(cb != null)
-		cb.call();
+  if(cb != null)
+    cb.call();
 }
 
 /**
@@ -305,35 +305,35 @@ function query(q, cb) {
  */
 function clearConv() {
 
-	// we dont want this feature to be spammed do we?
-	if(!safeToGo) {
-		console.log('Save yer horses ;)');
-		return;
-	}
+  // we dont want this feature to be spammed do we?
+  if(!safeToGo) {
+    console.log('Save yer horses ;)');
+    return;
+  }
 
-	var toWait = 0;
-	safeToGo = false;
-	$('#conversation > ul > li').each(function() {
-		var delay = Math.floor(Math.random()*500);
-		toWait = Math.max(toWait, delay);
-		var theLi = $(this);
-		setTimeout(function() {
-			theLi.animate({
-				top: "-=50px",
-				opacity: 0
-			}, 500, function() {
-				var scope = $(this);
-				setTimeout(function() {
-					scope.remove();
-				}, 100);
-			});
-		}, delay);
-	});
-	var safeMargin = toWait+800; // 500 + 300 for safe margin
-	setTimeout(function() {
-		safeToGo = true;
-	}, safeMargin);
-	return safeMargin;
+  var toWait = 0;
+  safeToGo = false;
+  $('#conversation > ul > li').each(function() {
+    var delay = Math.floor(Math.random()*500);
+    toWait = Math.max(toWait, delay);
+    var theLi = $(this);
+    setTimeout(function() {
+      theLi.animate({
+        top: "-=50px",
+        opacity: 0
+      }, 500, function() {
+        var scope = $(this);
+        setTimeout(function() {
+          scope.remove();
+        }, 100);
+      });
+    }, delay);
+  });
+  var safeMargin = toWait+800; // 500 + 300 for safe margin
+  setTimeout(function() {
+    safeToGo = true;
+  }, safeMargin);
+  return safeMargin;
 }
 
 /**
@@ -343,11 +343,11 @@ function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
     } else {
-    	ft = document.getElementById("footer-text");
+      ft = document.getElementById("footer-text");
       ft.innerHTML = "Geolocation is not supported by this browser.";
 
-			// well, better than nothing
-			getFood();
+    // well, better than nothing
+    getFood();
     }
 }
 
@@ -355,13 +355,13 @@ function getLocation() {
  * helper function to handle geolocation stuff
  */
 function showPosition(position) {
-	geoLoc.lat = position.coords.latitude;
-	geoLoc.long = position.coords.longitude;
+  geoLoc.lat = position.coords.latitude;
+  geoLoc.long = position.coords.longitude;
 
-	// it's better to ask for food now that we know where you are
-	getFood();
+  // it's better to ask for food now that we know where you are
+  getFood();
 
-	ft = document.getElementById("footer-text");
+  ft = document.getElementById("footer-text");
     ft.innerHTML = "Latitude: " + geoLoc.lat + "; Longitude: " + geoLoc.long;
 }
 
@@ -369,7 +369,7 @@ function showPosition(position) {
  * helper function to just fade the thing out without removing it from DOM
  */
 function fadeOut(target) {
-	$(target).animate({
-		opacity: 0
-	}, 200);
+  $(target).animate({
+    opacity: 0
+  }, 200);
 }
