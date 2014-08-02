@@ -37,7 +37,6 @@ body, html {
 	display: block;
 	z-index: 999;
 	top: 30px;
-	left: 0;
 }
 .left-arr {
 	left: 0;
@@ -48,4 +47,5 @@ body, html {
 .gal-la {
 	width: 100%;
 	text-align: center;
+	left: 0;
 }
