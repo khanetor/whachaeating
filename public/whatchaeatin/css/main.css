@@ -25,6 +25,7 @@ body, html {
 .selections img {
 	width: 200px;
 	height: 200px;
+	margin: 10px;
 }
 #gal {
 	height: 200px;
@@ -36,6 +37,7 @@ body, html {
 	display: block;
 	z-index: 999;
 	top: 30px;
+	left: 0;
 }
 .left-arr {
 	left: 0;
